@@ -1,0 +1,19 @@
+// Filename: pending_user.js
+
+define([
+    'underscore',
+    'backbone'
+], function(_, Backbone){
+    var PendingUserModel = Backbone.Model.extend({
+	urlRoot: '/auth/createuser',
+	defaults: {
+	    username: "",
+	    first_name: "",
+	    last_name: "",
+	    email: "",
+	}
+    });
+    
+    return PendingUserModel;
+});
+					

@@ -1,0 +1,32 @@
+{% extends "management_site/base.html" %}
+
+{% block title %}Support Management Tool{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}management_site/css/site.css" type="text/css"/>
+{% endblock %}
+
+{% block page %}
+<h1>Bienvenido a su caldera</h1>
+
+<form class="form-horizontal" action="/changevariables/" method="post" id="frm-change-variables">
+    <fieldset>
+        <div id="legend"><legend class="">Variables de Entorno:</legend></div>
+        {% for variable, value in variables.iteritems %}
+        <div class="form-group">
+            <label class="col-sm-3"  for="{{ variable }}">{{ variable }}: {{ value }} segundos</label>
+            <div class="col-xs-6 col-sm-6">
+                <input type="text" id="{{ variable }}" name="{{ variable }}" class="form-control"/>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <input type="submit" class="btn btn-primary" id="btn-manage-vars" name=""/>
+            </div>
+        </div>
+    </fieldset>
+    <div id="returnmessage">{{ return_message }}</div>
+</form>
+
+{% endblock %}

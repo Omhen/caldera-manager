@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}management_site/css/bootstrap.min.css" rel="stylesheet"/>
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body role="document" style="opacity: 1;">
+
+    <div class="container theme-showcase" role="main">
+      <div id='header' class="page-header">
+	{% block header %}
+	{% endblock %}
+      </div>
+
+      <div id='content'>
+	{% block page %}
+	{% endblock %}
+      </div>
+
+      <div id='footer'>
+	{% block footer%}
+	{% endblock %}
+	
+      </div>
+    </div>
+
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+	 ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}management_site/js/libs/bootstrap/bootstrap.min.js"></script>-->
+    <script data-main="/static/management_site/js/main" src="{{ STATIC_URL }}management/js/libs/require/require.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{% extends "eye_site/base.html" %}
+
+{% block title %}Gestión caldera{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}eye_site/css/404-style.css" />
+<!--<link rel="stylesheet" href="{{ STATIC_URL }}management_site/css/site.css" type="text/css"/>-->
+<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli:400,400italic' rel='stylesheet' type='text/css'>
+<link href="{{ STATIC_URL }}eye_site/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+<div class="row">
+    <div class="col-md-3">
+        <img id="logo" src="{{ STATIC_URL }}eye_site/imgs/ShuttleCloud.png" alt="some_text">
+    </div>
+</div> <!-- div row -->
+<div class="clearfix"></div>
+{% endblock %}
+
+{% block page %}
+<div class="container">
+  <div id="wrapper">
+      <article>
+            <span class="section-icon"><i class="fa fa-chain-broken fa-2x"></i></span>
+            <h1>404</h1>
+            <h4>Sorry - Page Not Found!</h4>
+            <p>The page you are looking for was moved, removed, renamed or might have never existed. <br>
+              You stumbled upon a broken link :(</p>
+      </article>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer%}
+<p>Omhen 2014</p>
+{% endblock %}
